@@ -26,7 +26,7 @@ async def post_images(file1: UploadFile = File(None), file2: UploadFile = File(N
         return Result(match=False, responseCode = status.HTTP_203_NON_AUTHORITATIVE_INFORMATION, responseMessage="File2 is empty or not Provided.")
 
     # Validate file extensions (you can add more allowed extensions if needed)
-    allowed_extensions = {"jpg", "jpeg", "png", "gif"}
+    allowed_extensions = {"jpg", "jpeg", "png"}
     file1_extension = file1.filename.split(".")[-1].lower()
     file2_extension = file2.filename.split(".")[-1].lower()
 
